@@ -1,3 +1,3 @@
 #!/bin/bash
 
-pacstrap /mnt base linux linux-firmware sudo iwd nvidia vim neofetch gcc links nnn
+pacstrap /mnt base linux linux-firmware sudo nvidia vim neofetch gcc links nnn dhcpcd
