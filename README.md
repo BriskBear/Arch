@@ -7,3 +7,6 @@
 ### After `arch-chroot /mnt`
   Scripts for configuration from LiveUSB.
   + set.Time
+  + Localize
+  + passwd
+  + set.GRUB

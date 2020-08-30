@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Select a Timezone:"
+ls /usr/share/zoneinfo
+read ZONE
+ln -sf /usr/share/zoneinfo/$ZONE /etc/localtime
+hwclock --systohc

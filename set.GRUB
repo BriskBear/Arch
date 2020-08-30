@@ -1,0 +1,16 @@
+#!/bin/bash
+
+fdisk -l
+echo "Select EFI partition: (/dev/sda)"
+read EFI
+# echo $EFI
+
+pacman -S grub efibootmgr
+mkdir /boot/efi
+mount $EFI /boot/efi
+lsblk
+echo "Enter to continue Ctrl-C to cancel..."
+read CONTINUE
+## INCOMPLETE
+## INCOMPLETE
+## INCOMPLETE
