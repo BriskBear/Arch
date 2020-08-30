@@ -3,7 +3,6 @@
 __Connects timectl to ntp servers.__
 
 ```
-
 #!/bin/bash
 
 timedatectl set-ntp true
