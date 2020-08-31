@@ -1,10 +1,15 @@
-# __ Install.Arch __
+# Install.Arch 
 ### Description:  
 
-Calls the main Pacstrap for loading arch into a filesystem mounted @ /mnt.
-This installs at a minimum base, linux and linux-firmware, then continues 
-to add packages specified in initPkg.list. You can simply append this list
-by running add.PKG
+Calls the main Pacstrap for loading arch into a filesystem mounted @ /mnt. 
+
+At a minimum this script installs:
+  + Base
+  + linux
+  + linux-firmware
+
+It appends this list with the contents of initPKG.list which are subject
+to change. Those programs will be listed in that readme instead.
 
 ## __Code__
 ```
