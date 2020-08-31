@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # list of dependecies from file
-declare -A PKG_list
+PKG_list=()
 
-. $HOME/Arch/Pre-Chroot/init.Pkg.list
-echo "pacstrap /mnt base linux linux-firmware ${PKG_list[@]}" 
+. $HOME/Arch/Pre-chroot/initPkg.list
+pacstrap /mnt base linux linux-firmware ${PKG_list[@]}
