@@ -1,4 +1,9 @@
-# __gen.Fstab Description__
+# gen.Fstab 
+### Description:  
+
+Generates fstab for the mounted filesystem @ /mnt.
+
+## __Code__
 ```
 #!/bin/bash
 

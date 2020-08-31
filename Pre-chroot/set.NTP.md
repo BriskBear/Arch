@@ -1,7 +1,10 @@
-# set.NTP ReadMe
+# set.NTP 
+### Description:  
 
-__Connects timectl to ntp servers.__
+Syncs the Session-Clock with NTP. 
+This is a pre-requisit of getting the TimeZone working properly.
 
+## __Code__
 ```
 #!/bin/bash
 
