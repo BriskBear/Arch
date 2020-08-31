@@ -20,4 +20,4 @@
 	```
 	Run this for root (probably logged in) 
 	and for the non-root superuser added with add.ADMIN
-  + set.GRUB (Work in Progress)
+  + [set.GRUB](set.GRUB.md)
