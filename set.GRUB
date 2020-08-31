@@ -1,16 +1,10 @@
 #!/bin/bash
 
 fdisk -l
-echo "Select EFI partition: (/dev/sda)"
+echo "Select EFI Drive: (/dev/sda)"
 read EFI
 # echo $EFI
 
-pacman -S grub efibootmgr
-mkdir /boot/efi
-mount $EFI /boot/efi
-lsblk
-echo "Enter to continue Ctrl-C to cancel..."
-read CONTINUE
-## INCOMPLETE
-## INCOMPLETE
-## INCOMPLETE
+pacman -S --noconfirm grub efibootmgr
+sleep 2
+grub-install --target=i386-pc "/dev/$EFI"
