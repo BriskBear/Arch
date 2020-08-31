@@ -1,3 +1,7 @@
 #!/bin/bash
 
-pacstrap /mnt base linux linux-firmware sudo nvidia vim neofetch gcc links nnn dhcpcd
+# list of dependecies from file
+declare -A PKG_list
+
+. $HOME/Arch/Pre-Chroot/init.Pkg.list
+echo "pacstrap /mnt base linux linux-firmware ${PKG_list[@]}" 

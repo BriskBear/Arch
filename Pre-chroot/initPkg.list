@@ -1,0 +1,13 @@
+# Draft for key
+PKG_list=+'dchpcd'
+PKG_list=+'systemd-networkd.service'
+PKG_list=+'systemd-resolved.service'
+PKG_list=+'nvidia'
+PKG_list=+'iwd'
+PKG_list=+'git'
+PKG_list=+'sudo'
+PKG_list=+'vim'
+PKG_list=+'neofetch'
+PKG_list=+'gcc'
+PKG_list=+'links'
+PKG_list=+'nnn'
