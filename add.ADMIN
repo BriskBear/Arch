@@ -2,4 +2,8 @@
 
 echo "Enter a name for the new SuperUser:"
 read USER
-useradd -m -g users -G adm,audio,network,video,wheel $USER
+# useradd -m -g users -G adm,audio,network,video,wheel $USER
+ln -s /bin/vim /usr/bin/vi
+echo "UNCOMMENT WHEEL OR HARDCODE $USER"
+sleep 5
+visudo
