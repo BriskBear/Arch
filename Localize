@@ -1,7 +1,9 @@
 #!/bin/bash
 
 locale-gen
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo "LANGUAGE=$null" > /etc/locale.conf
+echo "LC_ALL=$null" >> /etc/locale.conf
+echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 echo "KEYMAP=default" > /etc/vconsole.conf
 echo "Choose a Hostname:"
 read HOSTNAME
