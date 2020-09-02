@@ -1,6 +1,6 @@
 #!/bin/bash
 
-fdisk -l
+sudo fdisk -l
 echo "Select EFI Drive: (/dev/sda)"
 read EFI
 # echo $EFI
