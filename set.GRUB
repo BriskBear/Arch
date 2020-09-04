@@ -6,6 +6,5 @@ read EFI
 # echo $EFI
 
 sudo pacman -S --noconfirm grub efibootmgr
-sleep 2
-sudo grub-install --target=i386-pc "/dev/$EFI"
-sudo grub-mkconfig -o /boot/grub/grub.cfg
+grub-install --target=x86_64 --efi-directory="/boot/" --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
