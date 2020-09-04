@@ -2,16 +2,11 @@
 
 echo "Enter a name for the new SuperUser:"
 read USER
-<<<<<<< HEAD
-# useradd -m -g users -G adm,audio,network,video,wheel $USER
 ln -s /bin/vim /usr/bin/vi
 echo "UNCOMMENT WHEEL OR HARDCODE $USER"
-sleep 5
-=======
 useradd -m -g users -G adm,audio,network,video,wheel $USER
-
 ln -s /bin/vim /usr/bin/vi
-echo "ADD $USER EXPLICITLY OR UNCOMMENT WHEEL"
+
 sleep 4
->>>>>>> 83da2745f666f697a241d2b47daeab36f42fc7f9
+
 visudo
