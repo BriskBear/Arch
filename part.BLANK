@@ -1,0 +1,4 @@
+#!/bin/bash
+
+DSK=$1
+fdisk /dev/$DSK

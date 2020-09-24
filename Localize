@@ -12,3 +12,4 @@ echo "::1            localhost" >> /etc/hosts
 echo "127.0.1.1      $HOSTNAME.localdomain      $HOSTNAME" >> /etc/hosts
 echo "English Default added to Locale and Keymap."
 echo "/etc/hosts and /etc/hostname generated with $HOSTNAME."
+locale-gen
