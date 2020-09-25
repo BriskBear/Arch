@@ -2,10 +2,9 @@
 
 echo "Enter a name for the new SuperUser:"
 read USER
-ln -s /bin/vim /usr/bin/vi
+ln -s usr/bin/nano /usr/bin/vi
 echo "UNCOMMENT WHEEL OR HARDCODE $USER"
 useradd -m -g users -G adm,audio,network,video,wheel $USER
-ln -s /bin/vim /usr/bin/vi
 
 sleep 4
 
