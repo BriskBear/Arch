@@ -1,6 +1,6 @@
 # Draft for key
 PKG_list+=('dhcpcd')
-PKG_list+=('nvidia')
+#PKG_list+=('nvidia')
 PKG_list+=('iwd')
 PKG_list+=('git')
 PKG_list+=('sudo')

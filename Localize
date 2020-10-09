@@ -2,8 +2,9 @@
 
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
-echo "LC_MESSAGES=en_US.UTF-8" > /etc/locale.conf
-echo "KEYMAP=default" > /etc/vconsole.conf
+echo "LC_ALL=\"en_US.UTF-8\"" >> /etc/locale.conf
+echo "LC_MESSAGES=en_US.UTF-8" >> /etc/locale.conf
+echo "KEYMAP=default" >> /etc/vconsole.conf
 echo "Choose a Hostname:"
 read HOSTNAME
 echo $HOSTNAME > /etc/hostname
