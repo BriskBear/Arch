@@ -1,0 +1,8 @@
+#!/bin/bash
+
+PCI_OUT=$(lspci -k)
+FIRMWARE=$(dmesg | grep firmware)
+IWLWIFI=$(dmesg | grep iwlwifi)
+# ip link set _interface_ up
+printf "Check the driver status:\n"
+printf $PCI_OUT
