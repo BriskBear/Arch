@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sudo fdisk -l
-echo "Select EFI Drive: (/dev/sda)"
-read EFI
+#sudo fdisk -l
+#echo "Select EFI Drive: (/dev/sda)"
+#read EFI
 # echo $EFI
 
 sudo pacman -S --noconfirm grub efibootmgr
