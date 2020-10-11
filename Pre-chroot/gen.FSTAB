@@ -1,3 +1,4 @@
 #!/bin/bash
 
-genfstab -U -p / >> /etc/fstab
+mkdir /mnt/etc
+genfstab -U -p /mnt >> /mnt/etc/fstab
