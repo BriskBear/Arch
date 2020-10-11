@@ -1,7 +1,7 @@
 # Install.Arch 
 ### Description:  
 
-Calls the main Pacstrap for loading arch into a filesystem mounted @ /mnt. 
+Calls the main Pacstrap for loading Arch Linux into a filesystem mounted @ /mnt. 
 
 At a minimum this script installs:
   + Base
