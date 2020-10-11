@@ -1,4 +1,4 @@
-# __ add.ADMIN __
+# __add.ADMIN__
 ### Description:  
 This is for quickly adding an Admin user to Arch. Ensures all necessary groups are added to the user.
 
