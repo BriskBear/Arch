@@ -1,6 +1,8 @@
 #!/bin/bash
 
 PKG_list+=('base-devel')
+PKG_list+=('git')
+PKG_list+=('wget')
 PKG_list+=('sudo')
 PKG_list+=('nano')
 PKG_list+=('tree')
