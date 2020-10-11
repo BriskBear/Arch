@@ -1,3 +1,5 @@
 #!/bin/bash
 
 
+parts['/dev/nvme1']='/mnt/'
+parts['/dev/nvme2']='/mnt/boot'
