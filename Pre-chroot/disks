@@ -1,6 +1,0 @@
-#!/bin/bash
-
-disks['/dev/nvme0n1p1']='/mnt/boot'
-disks['/dev/nvme0n1p2']='/mnt/mnt/Win'
-disks['/dev/nvme0n1p4']='/mnt/mtn/winsteam'
-disks['/dev/nvme0n1p5']='/mnt/mnt/SteamLib'

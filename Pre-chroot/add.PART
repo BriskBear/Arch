@@ -1,0 +1,3 @@
+#!/bin/bash
+
+printf "parts[\'/dev/$1\']=\'/mnt$2\'\n" >> $HOME/Arch/Pre-chroot/parts

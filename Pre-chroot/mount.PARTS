@@ -3,7 +3,7 @@
 # Quickly mount disks the first time before fstab is generated.
 # Simply add the partition path (/dev/sda1) and mount directory 
 # (/mnt) to 'disks' file
-ROOT_PART='/dev/nvme0n1p3'
+ROOT_PART='/dev/sda2'
 SWAP_PART='/dev/nvme0n1p6'
 
 mount $ROOT_PART /mnt
@@ -22,6 +22,6 @@ do
     mount $d ${disks[$d]} &> /tmp/.0
 done
 
-swapon $SWAPPART
+swapon $SWAP_PART
 
-unset SWAPPART d disks
+unset SWAP_PART d disks
