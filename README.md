@@ -1,5 +1,5 @@
-# .io  
-_Linux Dotfiles for my ProfileAliases_  
+# Arch 
+_Piecemeal scripts for Archlinux installation_  
 
 __READmes.md__  
 
