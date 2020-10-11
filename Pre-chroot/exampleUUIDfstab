@@ -1,0 +1,4 @@
+UUID=<UUID> / ext4 defaults 0 1
+UUID=<UUID> swap ext4 defaults 0 1
+UUID=<UUID> /boot ext4 defaults 0 1
+UUID=<UUID> /home ext4 defaults 0 1
