@@ -11,7 +11,7 @@ then
     printf "Please specify SSID and PSK\nSSID:"
     read SSID
     printf "WPA-PSK:"
-    read PSK
+    read -s PSK
 fi
 wpa_passphrase $SSID $PSK
 
