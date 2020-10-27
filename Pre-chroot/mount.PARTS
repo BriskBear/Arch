@@ -1,10 +1,15 @@
 #!/bin/bash
 
 # Quickly mount disks the first time before fstab is generated.
-# Simply add the partition path (/dev/sda1) and mount directory 
+# Simply add the partition path (/dev/sda1) and mount directory
 # (/mnt) to 'disks' file
-ROOT_PART='/dev/sda2'
-SWAP_PART='/dev/nvme0n1p6'
+[[ $ROOT_PART ]] && \
+  printf 'root set to '"$ROOT_PART"', is that correct?'"\n" || \
+  ( printf 'Which partition will become root? ( / ) ' && \
+    read ROOT_PART )
+
+#ROOT_PART=''
+SWAP_PART=''
 
 mount $ROOT_PART /mnt
 
