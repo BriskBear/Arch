@@ -1,4 +1,5 @@
 # What's Left of my first Archbuild
+
 PKG_list+=('dhcpcd')
 PKG_list+=('nvidia')
 PKG_list+=('iwd')

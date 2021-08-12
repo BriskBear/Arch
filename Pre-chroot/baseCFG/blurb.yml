@@ -1,0 +1,22 @@
+--- # ArchLinux Default Applications, NO WIRELESS
+Pre-X:
+  - sudo
+  - nvidia
+  - git
+  - exa
+  - w3m
+  - which
+GUI+:
+  von git:
+    asdf:
+      - golang
+      - nodejs
+      - ruby
+      - vlang
+      - yarn
+    hub:
+      Airblader: i3-gaps
+      neovim: neovim
+      deftclaw: st
+    suckless: surf
+...

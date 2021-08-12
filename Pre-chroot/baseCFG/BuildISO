@@ -17,4 +17,3 @@ PKG_list+=('nnn')
 PKG_list+=('figlet')
 PKG_list+=('atom')
 PKG_list+=('tmux')
-
