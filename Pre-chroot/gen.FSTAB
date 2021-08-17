@@ -1,5 +1,19 @@
 
 #!/bin/bash
 
-[[ /mnt/etc ]] && printf "/mnt/etc exists" || mkdir -p /mnt/etc
+# Confirm Directory Structure
+[[ -e /mnt/etc ]] \
+  && printf "/mnt/etc exists" \
+  || mkdir -vp /mnt/etc
+[[ -e /mnt/mnt/env ]] \
+  && printf "/mnt/mnt/env exists" \
+  || mkdir -vp /mnt/mnt/env
+
+# Clean Existing fstab
+[[ -e /mnt/etc/fstab ]]&& rm -v /mnt/etc/fstab
+
+# Invoke genfstab to scan disks and write fstab
 genfstab -U -p /mnt >> /mnt/etc/fstab
+
+# Append the User-mountable RAMdisk
+printf "none /mnt/env ramfs noauto,user,exec,size=2048M,mode=0770 0 0\n" >> /mnt/etc/fstab
