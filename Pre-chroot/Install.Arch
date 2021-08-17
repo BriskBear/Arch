@@ -3,5 +3,5 @@
 # list of dependecies from file
 PKG_list=()
 
-. $HOME/Arch/Pre-chroot/initPkg.list
-pacstrap /mnt base linux linux-firmware ${PKG_list[@]}
+. ./initPkg.list
+pacstrap /mnt base binutils linux linux-firmware sudo ${PKG_list[@]}
