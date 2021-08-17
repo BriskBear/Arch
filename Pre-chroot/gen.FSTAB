@@ -13,7 +13,7 @@
 [[ -e /mnt/etc/fstab ]]&& rm -v /mnt/etc/fstab
 
 # Invoke genfstab to scan disks and write fstab
-genfstab -U -p /mnt >> /mnt/etc/fstab
+genfstab -U -p /mnt |tee -a /mnt/etc/fstab
 
 # Append the User-mountable RAMdisk
-printf "none /mnt/env ramfs rw,noauto,user,exec,size=2048M,mode=0770 0 0\n" >> /mnt/etc/fstab
+printf "none /mnt/env ramfs rw,noauto,user,exec,size=2048M,mode=0770 0 0\n" |tee -a /mnt/etc/fstab
