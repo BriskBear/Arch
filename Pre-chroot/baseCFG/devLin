@@ -1,3 +1,4 @@
+PKG_list+=('base-devel')
 PKG_list+=('nvidia')
 PKG_list+=('exa')
 PKG_list+=('w3m')
