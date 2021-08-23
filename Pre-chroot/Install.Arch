@@ -4,4 +4,4 @@
 PKG_list=()
 
 . ./initPkg.list
-pacstrap /mnt base binutils linux linux-firmware sudo ${PKG_list[@]}
+pacstrap /mnt linux linux-firmware ${PKG_list[@]}
