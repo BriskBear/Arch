@@ -5,7 +5,7 @@ arguments="${@:2}"
 defaults="-sric --needed --noconfirm"
 dir=$(mktemp -d)
 package=${1,,}
-log=$dir/$package_log
+log=$dir/$package\_log
 url=https://aur.archlinux.org/cgit/aur.git/snapshot/$package.tar.gz
 
 # Download the AUR package to a private RAM directory
