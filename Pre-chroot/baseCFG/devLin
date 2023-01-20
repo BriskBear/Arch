@@ -1,4 +1,6 @@
 PKG_list+=('base-devel')
+PKG_list+=('dhcpcd')
+PKG_list+=('iwd')
 PKG_list+=('unzip')
 PKG_list+=('nvidia')
 PKG_list+=('pavucontrol')
