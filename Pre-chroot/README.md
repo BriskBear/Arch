@@ -13,7 +13,7 @@ _Always remember to use `man <cmd>` or `<cmd> --help` to get details on what a p
     - 300Mb+ of fat EFI boot partition  
       - bootable flag  
       - EFI `t`ype  
-    - possible separate /home or /usr partitions/drives  
+    - possible separate `/home` or `/usr` partitions/drives  
       - Linux filesystem `t`ype (including `/`)  
 3. use `lsblk` again to identify your new partion(s)  
 4. format your partitions appropriately with mkfs.<ext4|vfat|btrfs>  
