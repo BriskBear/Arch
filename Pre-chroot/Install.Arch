@@ -4,4 +4,4 @@
 PKG_list=()
 
 . ./initPkg.list
-pacstrap /mnt base linux linux-firmware ${PKG_list[@]}
+pacstrap -P /mnt base linux linux-firmware ${PKG_list[@]}
