@@ -3,5 +3,11 @@
 # list of dependecies from file
 PKG_list=()
 
-. ./initPkg.list
-pacstrap -P /mnt base linux linux-firmware ${PKG_list[@]}
+# Ensure pacman-key has been initialized / updated
+pacman-key --init
+pacman-key --populate archlinux
+pacman-key --refresh-keys &> /dev/null # This is really noisy, so make it be quiet
+
+# Install all of the packages in the package-list-link
+. $(dirname "$0")/initPkg.list # Source the package-list-link in the same dir as this script
+pacstrap -P /mnt base linux linux-firmware ${PKG_list[@]} # Install all of the listed packages
