@@ -8,10 +8,9 @@ INSTALL_PSK=$(sudo pacman -Sy wpa_passphrase --needed --noconfirm &>> /tmp/.0)
 
 if [ ! ($SSID && $PSK) ]
 then
-    printf "Please specify SSID and PSK\nSSID:"
-    read SSID
-    printf "WPA-PSK:"
-    read -s PSK
+    printf "Please specify SSID and PSK"
+    read -p "SSID: " SSID
+    read -p "WPA-PSK: " -s PSK
 fi
 wpa_passphrase $SSID $PSK
 
