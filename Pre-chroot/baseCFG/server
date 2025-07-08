@@ -1,6 +1,7 @@
 PKG_list+=('arandr')
 PKG_list+=('base-devel')
 PKG_list+=('dhcpcd')
+PKG_list+=('doas')
 PKG_list+=('docker')
 PKG_list+=('eza')
 PKG_list+=('gcc')
