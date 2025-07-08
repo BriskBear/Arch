@@ -2,18 +2,16 @@
 
 locale="/etc/locale.conf"
 
-echo "LANG=en_US.UTF-8" >> "$locale"
+echo "LANG=en_US.UTF-8" > "$locale"
 echo "LC_ALL=\"en_US.UTF-8\"" >> "$locale"
 echo "LC_MESSAGES=en_US.UTF-8" >> "$locale"
-sed -i "s/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g" "$locale"
-sed -i "s/#en_US ISO-8859-1/en_US ISO-8859-1/g" "$locale"
 echo "KEYMAP=default" >> /etc/vconsole.conf
-echo "Choose a Hostname:"
-read HOSTNAME
+read -p "Choose a Hostname: " HOSTNAME
 echo $HOSTNAME > /etc/hostname
 echo "127.0.0.1      localhost" >> /etc/hosts
 echo "::1            localhost" >> /etc/hosts
 echo "127.0.1.1      $HOSTNAME.localdomain      $HOSTNAME" >> /etc/hosts
 echo "English Default added to Locale and Keymap."
 echo "/etc/hosts and /etc/hostname generated with $HOSTNAME."
+
 locale-gen
