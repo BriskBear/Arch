@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+. ../lib/reply.sh
+
+declare -A alloc
+disk="/dev/${1//\/dev\//}"
+
+## Check the selected disk is a disk in /dev
+# Confirm with user before destroying data
+[[ -b "${disk}" ]]                                      || throw "${disk} is not a valid block device."
+[[ `confirm "Erase ${disk} and install BriskLinux?"` ]] || throw "Cancelled"
+
+alloc['boot']=`cat ../templates/boot`
+alloc['root']=`cat ../templates/root`
+
+sfdisk --delete ${disk}  # Remove existing partitions
+
+echo -e "${alloc['boot']}" | sfdisk ${disk}           # Create the Boot partition
+echo -e "${alloc['root']}" | sfdisk --append ${disk}  # Append the Root partition
+
+mkfs.vfat -n BOOT "${disk}1"  # Format the boot partition
+mkfs.btrfs -L \/ "${disk}2"   # Format the root partition
+
+mount "${disk}2" /mnt       # Mount the root partition to /mnt
+mkdir /mnt/boot             # Add the boot folder on the root partition
+mount "${disk}1" /mnt/boot  # Mount the boot partiton to the boot folder on the root partition

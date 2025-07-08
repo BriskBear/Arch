@@ -1,8 +1,18 @@
 #!/bin/bash
 
+. ../lib/reply.sh
+
+# guard against unmounted system
+[[ `ls /mnt` =~ 'unmounted' ]] && throw "/mnt is not mounted!"
+
 # list of dependecies from file
 PKG_list=()
 
 # Install all of the packages in the package-list-link
-. $(dirname "$0")/initPkg.list # Source the package-list-link in the same dir as this script
-pacstrap -P /mnt base linux linux-firmware ${PKG_list[@]} # Install all of the listed packages
+. $(dirname "$0")/initPkg.list                             # Source the package-list-link in the same dir as this script
+pacstrap -P /mnt base linux linux-firmware ${PKG_list[@]}  # Install all of the listed packages
+
+cp -r /etc/skel /mnt/etc/skel                         # Copy the default user-framework
+cp -r /root/{.bashrc,.local,.profile} /mnt/root/      # Copy root-user profile
+cp -r /opt/arch /mnt/opt/                             # Copy the arch install repo
+cp /etc/{locale.gen,locale.conf,doas.conf} /mnt/etc/  # Copy locale and doas configurations
