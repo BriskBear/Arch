@@ -7,8 +7,8 @@ HERE=`dirname $(realpath $0)`
 
 ## Copy USA speed-filtered mirrorlist and point to it
 function prep-mirrorlist() {
-  cp "$HERE/mirrorlist.raw /etc/pacman.d"
-  ln -s "/etc/pacman.d/mirrorlist.raw" "/etc/pacman.d/mirror.list"
+  cp "$HERE/mirrorlist.raw" "/etc/pacman.d/"
+  ln -fs "/etc/pacman.d/mirrorlist.raw" "/etc/pacman.d/mirror.list"
 
   sed -i "s/mirrorlist/mirror.list/g" /etc/pacman.conf
 }
